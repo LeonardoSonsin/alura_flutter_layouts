@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:panucci_ristorante/components/main_drawer.dart';
+import 'package:panucci_ristorante/screens/highlights.dart';
 import 'package:panucci_ristorante/themes/app_colors.dart';
 
 class Home extends StatefulWidget {
@@ -60,6 +61,7 @@ class _HomeState extends State<Home> {
           });
         },
       ),
+      body: const Highlights(),
     );
   }
 }

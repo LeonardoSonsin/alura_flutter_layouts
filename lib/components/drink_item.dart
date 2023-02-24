@@ -24,7 +24,7 @@ final String itemPrice;
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Text(itemTitle, style: const TextStyle(fontSize: 16),),
-                Text("R\$ " + itemPrice),
+                Text("R\$ $itemPrice"),
               ],
             ),
           ),
