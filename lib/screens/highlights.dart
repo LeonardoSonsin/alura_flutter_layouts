@@ -24,14 +24,17 @@ class Highlights extends StatelessWidget {
             ),
           ),
           SliverList(
-            delegate: SliverChildBuilderDelegate((context, index) {
-              return HighlightItem(
-                imageURI: items[index]["image"],
-                itemTitle: items[index]["name"],
-                itemPrice: items[index]["price"],
-                itemDescription: items[index]["description"],
-              );
-            }, childCount: items.length),
+            delegate: SliverChildBuilderDelegate(
+              (context, index) {
+                return HighlightItem(
+                  imageURI: items[index]["image"],
+                  itemTitle: items[index]["name"],
+                  itemPrice: items[index]["price"],
+                  itemDescription: items[index]["description"],
+                );
+              },
+              childCount: items.length,
+            ),
           ),
         ],
       ),
