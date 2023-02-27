@@ -34,15 +34,26 @@ class Drinks extends StatelessWidget {
               },
               childCount: items.length,
             ),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: isOrientationLandscape(context) ? 3 : 2,
                 crossAxisSpacing: 8.0,
                 mainAxisSpacing: 8.0,
-                childAspectRatio: 160/200,
+                childAspectRatio: isOrientationLandscape(context) ? 1 : 160/200,
             ),
           ),
         ],
       ),
     );
+  }
+
+  bool isOrientationLandscape (BuildContext context) {
+    Orientation orientation = MediaQuery.of(context).orientation;
+
+    if (orientation == Orientation.landscape) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 }
